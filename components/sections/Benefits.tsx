@@ -12,11 +12,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-interface FooterProps {
+interface BenefitsProps {
   onJoinCommunity: () => void;
 }
 
-export default function Benefits({ onJoinCommunity }: FooterProps) {
+export default function Benefits({ onJoinCommunity }: BenefitsProps) {
   const benefits = [
     {
       icon: FileText,
@@ -111,7 +111,7 @@ export default function Benefits({ onJoinCommunity }: FooterProps) {
           ))}
         </div>
 
-        <div className="relative bg-gradient-to-br from-[#0397B3] to-teal-700 rounded-3xl p-10 md:p-16 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#0397B3] to-teal-700 rounded-3xl p-12 md:p-16 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
             <div className="absolute bottom-10 left-10 w-64 h-64 bg-teal-200 rounded-full blur-3xl"></div>
@@ -124,7 +124,7 @@ export default function Benefits({ onJoinCommunity }: FooterProps) {
             <p className="text-xl text-teal-50 mb-8 max-w-2xl mx-auto">
               Join a growing community of business owners who are building efficient, automated, and scalable businesses
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
+            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium mb-10">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-3 rounded-full">
                 <CheckCircle2 size={18} />
                 <span>Monthly workshops</span>
@@ -142,14 +142,15 @@ export default function Benefits({ onJoinCommunity }: FooterProps) {
                 <span>Resource library</span>
               </div>
             </div>
-          </div>
-          <div className="w-full text-center pt-8">
-          <button
+            <button
               onClick={onJoinCommunity}
-              className="group bg-white text-[#0397B3] px-10 py-5 rounded-xl text-xl font-semibold hover:bg-gray-50 cursor-pointer transition-all duration-300 hover:shadow-2xl inline-flex items-center gap-3"
+              className="group inline-flex items-center gap-2 bg-white text-[#0397B3] px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-50 hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
               Join the Community
-              <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </button>
           </div>
         </div>

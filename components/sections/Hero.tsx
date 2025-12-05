@@ -24,10 +24,10 @@ export default function Hero({ onJoinCommunity }: HeroProps) {
               <span>Systems & Operations Community</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight">
-              Build a Business That
+            <h1 className="text-5xl md:text-6xl xl:text-6xl font-bold text-gray-900 leading-[1.1] tracking-tight">
+              Build a Business 
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#0397B3] to-teal-600 mt-2">
-                Runs Itself
+              That Runs Itself
               </span>
             </h1>
 

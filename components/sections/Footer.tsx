@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, ArrowRight, Mail, Linkedin, Twitter } from "lucide-react";
+import { Sparkles, ArrowRight, Mail, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 
 interface FooterProps {
@@ -9,7 +9,7 @@ interface FooterProps {
 
 export default function Footer({ onJoinCommunity }: FooterProps) {
   return (
-    <footer className="bg-gradient-to-b from-white to-gray-50 pt-24 pb-8 px-4 relative overflow-hidden border-t border-gray-200">
+    <footer className="bg-gradient-to-b from-white to-gray-50 pt-12 pb-8 px-4 relative overflow-hidden border-t border-gray-200">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#0397B3]/20 to-transparent"></div>
       </div>
@@ -41,8 +41,8 @@ export default function Footer({ onJoinCommunity }: FooterProps) {
           </div>
         </div> */}
 
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
             <div className="mb-6">
               <Image
                 src="/logo.png"
@@ -55,78 +55,48 @@ export default function Footer({ onJoinCommunity }: FooterProps) {
             <p className="text-gray-600 leading-relaxed mb-6 max-w-md">
               A systems and operations community helping business owners build organized, automated, and scalable businesses.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-6 md:justify-start">
               <a
-                href="#"
+                href="mailto:hello@businesstechpoint.com"
                 className="w-10 h-10 bg-gray-100 hover:bg-[#0397B3] rounded-lg flex items-center justify-center text-gray-600 hover:text-white transition-all duration-300"
+                aria-label="Email us"
               >
                 <Mail size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/businesstechpoint"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-100 hover:bg-[#0397B3] rounded-lg flex items-center justify-center text-gray-600 hover:text-white transition-all duration-300"
+                aria-label="Follow us on LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/businesstechpoint"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-100 hover:bg-[#0397B3] rounded-lg flex items-center justify-center text-gray-600 hover:text-white transition-all duration-300"
+                aria-label="Follow us on Instagram"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Community
-                </a>
-              </li>
-              <li>
-                <a href="/quiz" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Assessment
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Programs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Support</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#0397B3] transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
+          <div className="md:text-left md:ml-auto md:mt-20">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Contact Us</h3>
+            <p className="text-gray-600 mb-4 leading-relaxed max-w-xs md:ml-auto">
+              Have questions? We&apos;d love to hear from you.
+            </p>
+            <a
+              href="mailto:hello@businesstechpoint.com"
+              className="inline-flex items-center gap-2 text-[#0397B3] hover:text-teal-700 font-medium mb-6 transition-colors"
+            >
+              <Mail size={18} />
+              info@businesstechpoint.com
+            </a>
+        
           </div>
         </div>
 
